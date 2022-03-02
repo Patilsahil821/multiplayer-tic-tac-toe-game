@@ -1,0 +1,100 @@
+h2 {
+  text-align: center;
+  position: relative;
+  bottom: 0;
+  text-align: center;
+}
+footer {
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 1rem;
+  color: green;
+}
+hr {
+  width: 100%;
+  flex-grow: 1;
+  position: absolute;
+}
+#root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 1rem 2rem;
+  position: relative;
+}
+#root::before {
+  width: 0%;
+  height: 0%;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 1px dashed transparent;
+  animation-name: border-animation;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  z-index: -1;
+}
+
+#root::after {
+  margin: 0;
+  padding: 0;
+  width: 0%;
+  height: 0%;
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  border: 1px dashed transparent;
+  animation-name: border-animation-2;
+  animation-duration: 0.5s;
+  animation-delay: 0.5s;
+  animation-fill-mode: forwards;
+  z-index: -1;
+}
+
+@keyframes header {
+  20% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes border-animation {
+  /* 0% {
+    width: 0%;
+  } */
+  25% {
+    border-top-color: green;
+    width: 100%;
+    height: 0%;
+  }
+  100% {
+    width: 100%;
+    height: 100%;
+    border-top-color: green;
+    border-right-color: green;
+  }
+}
+
+@keyframes border-animation-2 {
+  /* 0% {
+    width: 0%;
+  } */
+  50% {
+    border-bottom-color: green;
+    width: 99.5%;
+    height: 0%;
+  }
+  100% {
+    width: 100%;
+    height: 99.5%;
+    border-left-color: green;
+    border-bottom-color: green;
+  }
+}

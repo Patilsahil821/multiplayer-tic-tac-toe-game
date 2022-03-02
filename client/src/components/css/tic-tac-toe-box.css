@@ -1,0 +1,60 @@
+body {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 80vh;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+  overflow-x: hidden;
+}
+
+.box-container {
+  position: relative;
+}
+.row {
+  display: flex;
+}
+.row div {
+  height: 50px;
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  padding: 0;
+  margin: 0;
+}
+.row div:hover {
+  cursor: pointer;
+  background-color: #eee;
+}
+.border-right {
+  border-right: 1px solid black;
+}
+.border-bottom {
+  border-bottom: 1px solid black;
+}
+.border-left {
+  border-left: 1px solid black;
+}
+.border-top {
+  border-top: 1px solid black;
+}
+
+@keyframes example {
+  from {
+    width: 0px;
+  }
+  to {
+    width: 100%;
+  }
+}
+@keyframes diagonal {
+  from {
+    width: 0px;
+  }
+  to {
+    width: 135%;
+  }
+}
